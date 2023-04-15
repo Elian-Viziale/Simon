@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grid_bg"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/intituleScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SCORE : "
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="532dp"
+        android:layout_height="686dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse1" />
+
+    <TextView
+        android:id="@+id/cadreScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/intituleScore" />
+
+    <ImageButton
+        android:id="@+id/boutonJaune"
+        android:layout_width="166dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="268dp"
+        android:layout_marginRight="268dp"
+        android:background="#00FFFFFF"
+        android:onClick="onClick"
+        android:tag="jaune"
+        app:layout_constraintBottom_toTopOf="@+id/boutonBleu"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/b_jaune_clair" />
+
+    <ImageButton
+        android:id="@+id/boutonBleu"
+        android:layout_width="167dp"
+        android:layout_height="175dp"
+        android:layout_marginStart="99dp"
+        android:layout_marginLeft="99dp"
+        android:layout_marginTop="342dp"
+
+        android:layout_marginBottom="169dp"
+        android:background="#00FFFFFF"
+        android:onClick="onClick"
+        android:tag="bleu"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toStartOf="@+id/boutonRouge"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:srcCompat="@drawable/b_bleu_clair" />
+
+    <ImageButton
+        android:id="@+id/boutonVert"
+        android:layout_width="166dp"
+        android:layout_height="171dp"
+        android:layout_marginTop="167dp"
+        android:layout_marginEnd="102dp"
+        android:layout_marginRight="102dp"
+        android:layout_marginBottom="339dp"
+        android:background="#00FFFFFF"
+        android:onClick="onClick"
+        android:tag="vert"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/boutonJaune"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/b_vert_clair" />
+
+    <ImageButton
+        android:id="@+id/boutonRouge"
+        android:layout_width="170dp"
+        android:layout_height="177dp"
+        android:layout_marginStart="265dp"
+        android:layout_marginLeft="265dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginRight="96dp"
+        android:layout_marginBottom="167dp"
+        android:background="#00FFFFFF"
+        android:onClick="onClick"
+        android:tag="rouge"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/boutonVert"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/b_rouge_clair" />
+
+    <ImageButton
+        android:id="@+id/play"
+        android:layout_width="136dp"
+        android:layout_height="121dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bouton_play" />
+
+    <TextView
+        android:id="@+id/identiteTour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="264dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginTop="99dp"
+        android:layout_marginEnd="269dp"
+        android:layout_marginRight="269dp"
+        android:layout_marginBottom="555dp"
+        android:text="Appuyer pour jouer !"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />
+
+    <RadioGroup
+        android:id="@+id/groupeNiveau"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="563dp"
+        android:layout_marginEnd="138dp"
+        android:layout_marginRight="138dp"
+        android:layout_marginBottom="75dp"
+        android:checkedButton="@id/moyen"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView">
+
+        <RadioButton
+            android:id="@+id/facile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#994CAF50"
+            android:tag="facile"
+            android:text="FACILE" />
+
+        <RadioButton
+            android:id="@+id/moyen"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9AFFEB3B"
+            android:tag="moyen"
+            android:text="MOYEN"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="589dp" />
+
+        <RadioButton
+            android:id="@+id/difficile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9AFF0000"
+            android:tag="difficile"
+            android:text="DIFFICILE"
+            tools:layout_editor_absoluteX="249dp"
+            tools:layout_editor_absoluteY="589dp" />
+    </RadioGroup>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
